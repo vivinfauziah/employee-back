@@ -56,7 +56,7 @@ app.post("/api/validatetoken", passport.authenticate("auth", {session : false}),
     res.send(req.user)
 })
 
-app.get("/", () => {
+app.get("/", (req, res) => {
     res.send("Ready!!")
 })
 
